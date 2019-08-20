@@ -1,7 +1,6 @@
 [root@localhost ~]# yum install -y redhat-lsb lsof net-tools lrzsz wget perl gcc gcc-c++ make zlib zlib-devel readline-devel automake ncurses-devel epel-release bash-completion sysstat mlocate cmake kernel kernel-headers kernel-devel iptables-services apr* autoconf bison bzip2 bzip2* bzip2-devel cpp curl curl-devel fontconfig fontconfig-devel freetype freetype* freetype-devel gd gettext gettext-libs gettext-devel gettext-common-devel glibc glibc-devel glibc-headers keyutils keyutils-libs-devel krb5-devel libcom_err-devel libpng libpng-devel libjpeg* libsepol-devel libselinux-devel libstdc++-devel libtool* libgomp libxml2 libxml2-devel libXpm* libxml* libXaw-devel libXmu-devel libtiff libtiff* mpfr ncurses* ntp openssl openssl-devel patch pcre-devel php-common php-gd policycoreutils telnet t1lib t1lib* nasm nasm* libwebp libwebp-devel libjpeg-devel db4-devel  libXpm-devel libc-client-devel openldap-devel mysql-devel libicu-devel libcurl libcurl-devel libzip cpan tcp_wrappers psmisc tree cyrus-sasl-md5 vim chrony rsync xinetd crontabs iptables-utils git dos2unix boost boost-devel boost-doc libxslt libxslt-devel libdb4* qpid* gnutls boost-system avahi-libs  boost-thread dwz dyninst emacs-filesystem fipscheck fipscheck-lib gdb libdwarf libedit libgfortran unzip zip trousers pakchois nettle neon m4 mokutil libproxy libstdc++-devel libquadmath libquadmath-devel libmpc libmodman libgnome-keyring subversion-libs systemtap-devel systemtap-runtime  openssh openssh-clients systemtap-client perl-Carp perl-Data-Dumper perl-Encode perl-Error perl-Exporter perl-File-Path perl-File-Temp perl-Filter perl-Getopt-Long perl-Git perl-HTTP-Tiny perl-PathTools perl-Pod-Escapes perl-Pod-Perldoc perl-Pod-Simple perl-Pod-Usage perl-Scalar-List-Utils perl-Socket perl-Storable perl-TermReadKey perl-Test-Harness perl-Text-ParseWords perl-Thread-Queue perl-Time-HiRes perl-Time-Local perl-XML-Parser perl-constant perl-libs perl-macros perl-parent perl-podlators perl-srpm-macros perl-threads perl-threads-shared
 
 TypeError: Can not create packagename index: database or disk is full
-
 [root@localhost rpm-gpg]# df -h
 Filesystem      Size  Used Avail Use% Mounted on
 /dev/sda7        12G  3.2G  8.7G  27% /
@@ -15,7 +14,6 @@ tmpfs           487M     0  487M   0% /sys/fs/cgroup
 tmpfs            98M     0   98M   0% /run/user/0
 
 [root@localhost rpm-gpg]# mv /var/cache /home
-
 [root@localhost rpm-gpg]# ln -s /home/cache /var
 
 [root@localhost rpm-gpg]# df -h
@@ -29,6 +27,15 @@ tmpfs           487M     0  487M   0% /sys/fs/cgroup
 /dev/sda6      1014M  173M  842M  18% /var
 /dev/sda2       197M  139M   59M  71% /boot
 tmpfs            98M     0   98M   0% /run/user/0
+
+fdisk config:
+/     =8G
+/usr  =2G
+/boot =0.5G
+/home =4G
+/var  =3G
+/swap =2G
+/tmp  =0.5G
 
 [root@localhost ~]# yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel
 [root@localhost ~]# yum install gcc perl-ExtUtils-MakeMaker
