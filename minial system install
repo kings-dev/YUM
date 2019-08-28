@@ -28,7 +28,7 @@ tmpfs           487M     0  487M   0% /sys/fs/cgroup
 /dev/sda2       197M  139M   59M  71% /boot
 tmpfs            98M     0   98M   0% /run/user/0
 
-fdisk config:
+database or disk config:
 /     =8G
 /usr  =2G
 /boot =0.5G
