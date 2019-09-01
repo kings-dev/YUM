@@ -1,0 +1,3 @@
+[root@localhost ~]# curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
+[root@localhost ~]# yum makecache
+[root@localhost ~]# /etc/yum.repos.d/CentOS-Base.repo
